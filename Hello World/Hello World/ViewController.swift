@@ -20,7 +20,7 @@ class ViewController: UIViewController {
 
     @IBAction func pressButtonAction(_ sender: UIButton) {
         print("button was pressed")
-        label1.text = "button is pressed"
+        label1.text = "Hello world"
     }
 }
 
