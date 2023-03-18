@@ -27,4 +27,9 @@ pod init
 
 cocopods.org
 
+(Run this for the first time)
 
+sudo arch -x86_64 gem install ffi
+
+(Run this for every time you want to install pods)
+arch -x86_64 pod install

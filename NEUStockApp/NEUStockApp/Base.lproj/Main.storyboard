@@ -27,7 +27,7 @@
                                     <constraint firstAttribute="height" constant="40" id="2BN-iC-CYy"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Get Stock Value"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Get Comapny Information"/>
                                 <connections>
                                     <action selector="getStockPrice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8IW-w7-6oU"/>
                                 </connections>
@@ -37,6 +37,20 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="xQ3-na-h17"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Company Name: --" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Q6-kv-D8z">
+                                <rect key="frame" x="20" y="596" width="353" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Website:--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTt-6Y-1E0">
+                                <rect key="frame" x="28" y="640" width="345" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -58,8 +72,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="companyName" destination="5Q6-kv-D8z" id="tf5-fu-GrV"/>
                         <outlet property="lblStockPrice" destination="FHq-nl-kB0" id="272-Nt-v19"/>
                         <outlet property="txtStockSymbol" destination="czu-jr-EEe" id="lNh-gO-xss"/>
+                        <outlet property="website" destination="PTt-6Y-1E0" id="Djg-T7-Baa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
