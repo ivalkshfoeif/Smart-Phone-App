@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GetLocation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycZ-dk-SBa">
+                                <rect key="frame" x="78" y="393" width="237" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="237" id="hIE-yW-BuV"/>
+                                    <constraint firstAttribute="height" constant="35" id="sha-yX-hLh"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Get Latitude and Longtitude"/>
+                                <connections>
+                                    <action selector="getLatAndLongt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K4z-3g-a5C"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longtitude" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCK-jH-wvJ">
+                                <rect key="frame" x="10" y="348" width="373" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="tHY-EA-tch"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgJ-aZ-EeE">
+                                <rect key="frame" x="10" y="303" width="373" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="PtC-zU-DD5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WCK-jH-wvJ" secondAttribute="trailing" constant="10" id="5DY-4N-qcr"/>
+                            <constraint firstItem="ycZ-dk-SBa" firstAttribute="top" secondItem="WCK-jH-wvJ" secondAttribute="bottom" constant="20" id="5bs-5C-vAO"/>
+                            <constraint firstItem="WCK-jH-wvJ" firstAttribute="top" secondItem="vgJ-aZ-EeE" secondAttribute="bottom" constant="20" id="KbT-o2-KRh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vgJ-aZ-EeE" secondAttribute="trailing" constant="10" id="WFe-jC-BcT"/>
+                            <constraint firstItem="vgJ-aZ-EeE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="XHR-vx-6PZ"/>
+                            <constraint firstItem="WCK-jH-wvJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="lAk-L9-Uzb"/>
+                            <constraint firstItem="vgJ-aZ-EeE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="244" id="lMR-p9-pJu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblLatitude" destination="vgJ-aZ-EeE" id="4ae-RM-v1k"/>
+                        <outlet property="lblLongtitude" destination="WCK-jH-wvJ" id="inh-s4-ylN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

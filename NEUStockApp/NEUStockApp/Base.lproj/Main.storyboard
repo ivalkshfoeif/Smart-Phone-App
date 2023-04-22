@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ff6-1h-vbw">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Stock App-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NEUStockApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -71,6 +71,13 @@
                             <constraint firstItem="czu-jr-EEe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ygN-qQ-G31"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Stock App" id="Z9H-ga-htO">
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="5qG-i5-xow">
+                            <connections>
+                                <action selector="addStockToDB:" destination="BYZ-38-t0r" id="GIe-Xw-w6A"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="companyName" destination="5Q6-kv-D8z" id="tf5-fu-GrV"/>
                         <outlet property="lblStockPrice" destination="FHq-nl-kB0" id="272-Nt-v19"/>
@@ -79,6 +86,24 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1040.4580152671756" y="-27.464788732394368"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="s9B-ux-nFu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ff6-1h-vbw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="u8H-nE-Ntm">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rFH-pi-2ms"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hcs-ZS-Tcn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="113.74045801526717" y="-27.464788732394368"/>
         </scene>

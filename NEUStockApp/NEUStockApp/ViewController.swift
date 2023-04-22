@@ -12,6 +12,11 @@ import SwiftSpinner
 
 class ViewController: UIViewController {
     
+    var txtField: UITextField!
+    
+    
+    var stockSymbol = ""
+    
     @IBOutlet weak var txtStockSymbol: UITextField!
     
     @IBOutlet weak var lblStockPrice: UILabel!
@@ -56,6 +61,37 @@ class ViewController: UIViewController {
             self.companyName.text = "Company Name = \(name)"
             
         }
+    }
+    
+    
+    @IBAction func addStockToDB(_ sender: Any) {
+        let alertController = UIAlertController(title: "Add Stock to DB", message: "Type Stock Symbol", preferredStyle: .alert)
+        
+        let OKButton = UIAlertAction(title: "OK", style: .default){ action in
+            //self.lblStock.text = self.txtField?.text
+            guard let symbol = self.txtField?.text else {return}
+            self.findAndAddStockToLocalDB(symbol: symbol)
+            // print("Stock symbol = \(self.txtField?.text)")
+        }
+        
+        let cancelButton = UIAlertAction(title: "Cancel", style: .default){
+            action in print("I am in cancel butrton")
+        }
+        
+        alertController.addTextField{ lblTextField in
+            self.txtField = lblTextField
+            lblTextField.placeholder = "Type Stock Value"
+        }
+        
+        alertController.addAction(OKButton)
+        alertController.addAction(cancelButton)
+        
+        self.present(alertController, animated: true)
+    }
+    
+    
+    func findAndAddStockToLocalDB (symbol: String) {
+        // make a network call for the stock symbol
     }
 }
 

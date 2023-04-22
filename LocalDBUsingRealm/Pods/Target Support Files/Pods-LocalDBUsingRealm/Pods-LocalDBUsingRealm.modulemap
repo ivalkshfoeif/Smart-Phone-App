@@ -1,0 +1,6 @@
+framework module Pods_LocalDBUsingRealm {
+  umbrella header "Pods-LocalDBUsingRealm-umbrella.h"
+
+  export *
+  module * { export * }
+}
