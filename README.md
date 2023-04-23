@@ -4,9 +4,9 @@ target 'YourProjectName' do
 
 # Comment the next line if you don't want to use dynamic frameworks
 
-use_frameworks!
+use_frameworks!ß
 
-# Pods for YourProjectName
+# Pods for YourProjectNameß
 
 pod 'Alamofire'
 pod 'SwiftSpinner'
@@ -28,6 +28,7 @@ pod init
 cocopods.org
 
 (Run this for the first time)
+don't run this again !!!
 
 sudo arch -x86_64 gem install ffi
 
